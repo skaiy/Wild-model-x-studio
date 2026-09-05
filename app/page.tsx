@@ -37,7 +37,7 @@ export default function Home(){
  function toggleHelp(){setHelp(!help);if(compact){setComponentsOpen(false);setDetailOpen(false);setToolsOpen(false)}}
 
  return <main className="studio" ref={root}>
-  <section className="stage-view" aria-label="Interactive Model X studio">
+  <section className="stage-view" aria-label="Interactive Wild Model X studio">
    <VehicleScene focusedMesh={focusedMesh} onInspect={setFocusedMesh} ref={scene} selected={selected} explode={explode} labels={labels} autoRotate={rotate} isolated={isolated} onSelect={select}/>
   </section>
   <div className="model-plaque"><span>T E S L A</span><h1>MODEL X</h1></div>

@@ -1,4 +1,4 @@
-# Model X Studio
+# Wild Model X Studio
 
 Interactive 3D Tesla Model X studio with a circular display platform, component descriptions, individual-piece isolation, and a progressive explosion slider covering all 334 mesh pieces.
 
