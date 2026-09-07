@@ -3,6 +3,24 @@ import {OEM_SYSTEM_TEMPLATE} from './oem-systems';
 import {AUTHORING_SCHEMA} from './schema';
 import type {PackRow, PieceRow, SystemRow, VehiclePackManifest} from './types';
 
+/** 旧演示系统 id / 常见别名 → 主机厂模板 id */
+export const SYSTEM_ALIASES: Record<string, string> = {
+  cabin: 'interior',
+  doors: 'closures',
+  glass: 'exterior',
+  battery: 'edrive',
+  drive: 'edrive',
+  suspension: 'chassis',
+};
+
+export function resolveSystemId(raw: string | null | undefined, known: Set<string>): string | null {
+  if (!raw) return null;
+  if (known.has(raw)) return raw;
+  const aliased = SYSTEM_ALIASES[raw];
+  if (aliased && known.has(aliased)) return aliased;
+  return null;
+}
+
 const IDB_NAME = 'wild-authoring';
 const IDB_STORE = 'sqlite';
 const IDB_KEY = 'authoring-db-v1';
@@ -13,7 +31,13 @@ let persistTimer: ReturnType<typeof setTimeout> | null = null;
 
 async function loadSql(): Promise<SqlJsStatic> {
   if (SQL) return SQL;
-  SQL = await initSqlJs({locateFile: (file) => `/${file}`});
+  SQL = await initSqlJs({
+    locateFile: (file) => {
+      // Vite may resolve either sql-wasm.wasm or sql-wasm-browser.wasm.
+      if (file.endsWith('.wasm')) return `/${file.split('/').pop()}`;
+      return `/${file}`;
+    },
+  });
   return SQL;
 }
 

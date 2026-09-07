@@ -14,6 +14,7 @@ import {
   listPieces,
   listSystems,
   resetSystemsToOemTemplate,
+  resolveSystemId,
   updatePackMeta,
   updatePiece,
   upsertSystem,
@@ -116,7 +117,7 @@ export default function AuthoringPage() {
         warningSolid: parsed.warningSolid,
         pieces: parsed.pieces.map((p) => ({
           ...p,
-          systemId: p.systemId && known.has(p.systemId) ? p.systemId : null,
+          systemId: resolveSystemId(p.systemId, known),
         })),
       });
       setTab('editor');
