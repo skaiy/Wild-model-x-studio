@@ -3,5 +3,6 @@
   "framework": "vite",
   "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist/vercel",
-  "installCommand": "npm ci"
+  "installCommand": "npm ci",
+  "rewrites": [{"source": "/authoring", "destination": "/index.html"}]
 }

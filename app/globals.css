@@ -18,6 +18,54 @@
 @media(max-width:1050px){.components-panel{width:195px;left:16px}.part-row{font-size:11px;gap:7px}.detail-panel{right:70px;width:280px}.view-tools{right:14px}.model-plaque{left:20px;top:20px}.explode-dock{bottom:18px}}
 @media(max-width:700px){.model-plaque{top:18px;left:17px}.model-plaque h1{font-size:17px;letter-spacing:2px;margin-top:5px}.model-plaque>span{font-size:8px}.components-panel{top:85px;transform:none;left:12px;width:190px;max-height:36dvh}.panel-heading{padding:9px 11px 5px}.parts-list{padding-bottom:7px}.part-row{min-height:34px}.view-tools{top:18px;right:12px;transform:none;padding:4px}.view-tools button{height:31px;width:28px}.detail-panel{top:auto;bottom:108px;right:12px;left:12px;width:auto;transform:none;max-height:52dvh;z-index:10}.detail{padding:0 16px 15px}.detail h2{font-size:19px;margin:9px 0 13px}.detail-copy{font-size:13px}.explode-dock{bottom:14px;width:calc(100% - 24px);gap:12px;padding:12px}.assembly-button{min-width:38px}.assembly-button span{font-size:9px}.dock-divider{display:none}.labels-toggle{font-size:9px}.explode-control{padding-left:0;padding-right:0}.slider-caption{font-size:10px}.about-panel{left:12px;right:55px;top:85px;width:auto}.scene-label strong{max-width:110px;overflow:hidden;white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Authoring console */
+.authoring-shell{min-height:100svh;padding:24px 28px 40px;background:#070a0d;color:#e5e9ed}
+.authoring-top{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:18px}
+.authoring-kicker{margin:0;font-size:11px;letter-spacing:2px;color:#8ea0ad}
+.authoring-top h1{margin:6px 0 8px;font-size:28px;font-weight:400}
+.authoring-muted{color:#8c99a4;font-size:13px;line-height:1.6}
+.authoring-top-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.authoring-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 14px;border-radius:4px;background:#c0d3e1;color:#11161b;font-size:12px}
+.authoring-btn:hover{filter:brightness(1.05)}.authoring-btn:disabled{opacity:.5}
+.authoring-btn.ghost{background:transparent;color:#c5d5e1;border:1px solid #c8dcf028}
+.authoring-banner{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px;padding:12px 14px;border-radius:4px;background:#1a2730;border:1px solid #c8dcf022;font-size:13px;line-height:1.55}
+.authoring-banner.is-error{border-color:#d27b7b55;background:#2a1717;color:#f0c7c7}
+.authoring-banner button{color:#9eb3c2;font-size:12px}
+.authoring-tabs{display:flex;gap:6px;margin-bottom:16px}
+.authoring-tabs button{padding:8px 14px;border-radius:4px;color:#8fa1af;font-size:13px}
+.authoring-tabs button.active,.authoring-tabs button:hover{background:#b9d6ec12;color:#e7eef4}
+.authoring-panel,.authoring-editor{background:#0c121bd4;border:1px solid #c8dcf017;border-radius:6px;padding:16px}
+.authoring-panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.authoring-panel-head h2{margin:0;font-size:16px;font-weight:400}
+.authoring-table-wrap{overflow:auto}
+.authoring-table-wrap table{width:100%;border-collapse:collapse;font-size:12px}
+.authoring-table-wrap th,.authoring-table-wrap td{padding:9px 8px;border-bottom:1px solid #d0e0ed10;text-align:left;vertical-align:middle}
+.authoring-table-wrap th{color:#8fa3b1;font-weight:400}
+.authoring-row-actions{display:flex;gap:8px}
+.authoring-row-actions button{color:#b7c9d6;text-decoration:underline;text-underline-offset:3px}
+.swatch{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:middle}
+.authoring-grid-2{display:grid;grid-template-columns:1.4fr .9fr;gap:16px}
+.authoring-form{display:flex;flex-direction:column;gap:10px}
+.authoring-form h3{margin:0;font-size:14px;font-weight:400}
+.authoring-form label,.authoring-field{display:flex;flex-direction:column;gap:6px;font-size:12px;color:#9aabb6}
+.authoring-form input,.authoring-form select,.authoring-form textarea,.authoring-field input{padding:8px 10px;border-radius:4px;border:1px solid #39434c;background:#0a1016;color:#e5e9ed}
+.authoring-editor-toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.authoring-editor-grid{display:grid;grid-template-columns:240px minmax(280px,1fr) 280px;gap:12px;min-height:62vh}
+.authoring-side{background:#0a1016;border:1px solid #c8dcf014;border-radius:5px;padding:12px;overflow:auto;max-height:70vh}
+.authoring-piece-list{display:flex;flex-direction:column;gap:4px;margin-top:10px}
+.authoring-piece-row{display:flex;flex-direction:column;gap:2px;text-align:left;padding:8px;border-radius:3px;color:#9eb0bd}
+.authoring-piece-row em{font-style:normal;font-size:11px;color:#7f919f}
+.authoring-piece-row.selected,.authoring-piece-row:hover{background:#b9d6ec12;color:#eaf0f5}
+.authoring-viewport{position:relative;min-height:520px;border-radius:5px;overflow:hidden;border:1px solid #c8dcf014;background:#050607}
+.authoring-canvas{position:absolute;inset:0}
+.authoring-viewport-dock{position:absolute;left:12px;right:12px;bottom:12px;display:flex;gap:16px;align-items:center;padding:10px 12px;border-radius:4px;background:#0c121be6;font-size:12px;z-index:2}
+.authoring-viewport-dock input[type=range]{width:min(220px,40vw)}
+.authoring-help{margin-top:18px;padding-top:12px;border-top:1px solid #d0e0ed12}
+.authoring-help h4{margin:0 0 8px;font-size:13px;font-weight:400}
+.authoring-help ol{margin:0;padding-left:18px;color:#8c99a4;font-size:12px;line-height:1.7}
+@media(max-width:1100px){.authoring-grid-2,.authoring-editor-grid{grid-template-columns:1fr}.authoring-top{flex-direction:column}.authoring-viewport{min-height:420px}}
+
 /* Phone controls occupy safe areas; the car keeps an unobstructed stage. */
 .studio{min-height:0}.view-tools .tools-more{display:none}
 @media(max-width:700px),(max-height:500px){

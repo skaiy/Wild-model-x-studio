@@ -11,11 +11,25 @@ npm ci
 npm run dev -- --port 3015
 ```
 
+Open `/` for the Model X demo. Open `/authoring` for the low-code explosion asset console.
+
+## Authoring console (`/authoring`)
+
+Foolproof backend for non-IT operators to build explosion packs:
+
+1. Upload **GLB / glTF / FBX / OBJ** (no STEP in phase 1)
+2. Auto-split into mesh pieces (warns on solid/合模 models; no server-side split yet)
+3. Assign OEM systems (default template: 车身 / 开闭件 / 三电 / 底盘 / 车轮与制动 / 内饰 / 外饰 / 其他 — fully CRUD-configurable)
+4. Export/import **CSV index** to fill `system_id` / `label` / `business_key` in Excel, then re-import
+5. Preview explode/isolate and publish `model.glb` + `manifest.json`
+
+Data persists in **browser SQLite (sql.js)** via IndexedDB. You can export the `.sqlite` file. `business_key` is optional in phase 1.
+
 ## Vercel
 
 Import this repository into Vercel with the repository root as the project root. The checked-in `vercel.json` builds the browser application with `npm run build:vercel` and serves `dist/vercel`. No environment variables or database are required.
 
-The Vercel entry point reuses the same React page, styles, component library, Three.js scene and local model assets as the existing development app. The original `npm run build` remains available for the Vinext / Cloudflare output.
+The Vercel entry point reuses the same React page, styles, component library, Three.js scene and local model assets as the existing development app. The original `npm run build` remains available for the Vinext / Cloudflare output. `/authoring` is rewritten to the SPA shell.
 
 Configuration reference: https://vercel.com/docs/project-configuration/vercel-json
 

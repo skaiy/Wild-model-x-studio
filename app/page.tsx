@@ -83,6 +83,6 @@ function Studio(){
    <button className={'assembly-button '+(explode===100?'active':'')} title={t('separateAllPieces')} onClick={()=>{setExplode(100);setIsolated(false)}} aria-label={t('separateAllPieces')}><Expand size={18}/><span>{t('allParts')}</span></button>
    <div className="dock-divider"/><label className="labels-toggle"><Switch checked={labels} onCheckedChange={setLabels} aria-label={t('showLabels')}/><span>{t('labels')}</span></label>
   </div>
-  {help&&<aside className="about-panel floating-panel" aria-label={t('aboutTheModel')}><div className="panel-heading"><h2>{t('aboutTheModel')}</h2><button className="icon-button" onClick={()=>setHelp(false)} aria-label={t('closeModelInfo')}><X size={15}/></button></div><p>{t('aboutIntro')}</p><p>{t('aboutCreditA')}<a href="https://www.blendkit.com/asset-gallery-detail/983e8f94-5a56-44a4-94d9-eed5e4cdcd6c/" target="_blank" rel="noreferrer">cgi Moon</a>{t('aboutCreditB',{count:catalog.length||334})}</p></aside>}
+  {help&&<aside className="about-panel floating-panel" aria-label={t('aboutTheModel')}><div className="panel-heading"><h2>{t('aboutTheModel')}</h2><button className="icon-button" onClick={()=>setHelp(false)} aria-label={t('closeModelInfo')}><X size={15}/></button></div><p>{t('aboutIntro')}</p><p>{t('aboutCreditA')}<a href="https://www.blendkit.com/asset-gallery-detail/983e8f94-5a56-44a4-94d9-eed5e4cdcd6c/" target="_blank" rel="noreferrer">cgi Moon</a>{t('aboutCreditB',{count:catalog.length||334})}</p><p><a href="/authoring">爆炸资产后台 / Authoring</a></p></aside>}
  </main>
 }
